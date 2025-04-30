@@ -30,11 +30,12 @@
         {
             panel1 = new Panel();
             panel2 = new Panel();
-            textLogin = new TextBox();
-            texSenha = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
             btnEntrada = new Button();
+            textSenha = new TextBox();
+            textLogin = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            btnfechar = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -49,8 +50,9 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(btnfechar);
             panel2.Controls.Add(btnEntrada);
-            panel2.Controls.Add(texSenha);
+            panel2.Controls.Add(textSenha);
             panel2.Controls.Add(textLogin);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
@@ -60,51 +62,6 @@
             panel2.Size = new Size(478, 450);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
-            // 
-            // textLogin
-            // 
-            textLogin.BackColor = Color.Black;
-            textLogin.BorderStyle = BorderStyle.None;
-            textLogin.Font = new Font("Perpetua Titling MT", 18F);
-            textLogin.ForeColor = Color.White;
-            textLogin.Location = new Point(99, 75);
-            textLogin.Name = "textLogin";
-            textLogin.Size = new Size(261, 43);
-            textLogin.TabIndex = 0;
-            textLogin.Text = "Usuário:";
-            // 
-            // texSenha
-            // 
-            texSenha.BackColor = Color.Black;
-            texSenha.BorderStyle = BorderStyle.None;
-            texSenha.Font = new Font("Perpetua Titling MT", 18F);
-            texSenha.ForeColor = Color.White;
-            texSenha.Location = new Point(99, 170);
-            texSenha.Name = "texSenha";
-            texSenha.Size = new Size(261, 43);
-            texSenha.TabIndex = 0;
-            texSenha.Text = "Senha:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(99, 197);
-            label1.Name = "label1";
-            label1.Size = new Size(257, 25);
-            label1.TabIndex = 1;
-            label1.Text = "___________________________________";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(99, 100);
-            label2.Name = "label2";
-            label2.Size = new Size(264, 25);
-            label2.TabIndex = 1;
-            label2.Text = "____________________________________";
-         
             // 
             // btnEntrada
             // 
@@ -118,6 +75,64 @@
             btnEntrada.TabIndex = 2;
             btnEntrada.Text = "Entrar";
             btnEntrada.UseVisualStyleBackColor = false;
+            btnEntrada.Click += btnEntrada_Click;
+            // 
+            // textSenha
+            // 
+            textSenha.BackColor = Color.Black;
+            textSenha.BorderStyle = BorderStyle.None;
+            textSenha.Font = new Font("Perpetua Titling MT", 18F);
+            textSenha.ForeColor = Color.White;
+            textSenha.Location = new Point(99, 170);
+            textSenha.Name = "textSenha";
+            textSenha.Size = new Size(261, 43);
+            textSenha.TabIndex = 0;
+            textSenha.Text = "Senha:";
+            // 
+            // textLogin
+            // 
+            textLogin.BackColor = Color.Black;
+            textLogin.BorderStyle = BorderStyle.None;
+            textLogin.Font = new Font("Perpetua Titling MT", 18F);
+            textLogin.ForeColor = Color.White;
+            textLogin.Location = new Point(99, 75);
+            textLogin.Name = "textLogin";
+            textLogin.Size = new Size(261, 43);
+            textLogin.TabIndex = 0;
+            textLogin.Text = "Usuário:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(99, 100);
+            label2.Name = "label2";
+            label2.Size = new Size(264, 25);
+            label2.TabIndex = 1;
+            label2.Text = "____________________________________";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(99, 197);
+            label1.Name = "label1";
+            label1.Size = new Size(257, 25);
+            label1.TabIndex = 1;
+            label1.Text = "___________________________________";
+            // 
+            // btnfechar
+            // 
+            btnfechar.BackColor = Color.Black;
+            btnfechar.Font = new Font("Segoe UI", 11F);
+            btnfechar.ForeColor = Color.White;
+            btnfechar.Location = new Point(382, 12);
+            btnfechar.Name = "btnfechar";
+            btnfechar.Size = new Size(74, 34);
+            btnfechar.TabIndex = 3;
+            btnfechar.Text = "X";
+            btnfechar.UseVisualStyleBackColor = false;
+            btnfechar.Click += btnfechar_Click;
             // 
             // FrmLogin
             // 
@@ -141,9 +156,10 @@
         private Panel panel1;
         private Panel panel2;
         private TextBox textLogin;
-        private TextBox texSenha;
+        private TextBox textSenha;
         private Label label2;
         private Label label1;
         private Button btnEntrada;
+        private Button btnfechar;
     }
 }

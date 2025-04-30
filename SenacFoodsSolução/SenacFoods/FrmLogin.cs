@@ -11,5 +11,20 @@ namespace SenacFoods
         {
 
         }
+
+        private void btnEntrada_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            //criar uma instancia de frmprincipal
+            var frmPricipal = new FrmPrinncipal();
+            //exibe a tela principal 
+            frmPricipal.Show();
+
+        }
+
+        private void btnfechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
