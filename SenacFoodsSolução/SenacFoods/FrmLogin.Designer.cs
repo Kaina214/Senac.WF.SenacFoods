@@ -30,12 +30,12 @@
         {
             panel1 = new Panel();
             panel2 = new Panel();
+            btnfechar = new Button();
             btnEntrada = new Button();
             textSenha = new TextBox();
             textLogin = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            btnfechar = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,6 +62,19 @@
             panel2.Size = new Size(478, 450);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
+            // 
+            // btnfechar
+            // 
+            btnfechar.BackColor = Color.Black;
+            btnfechar.Font = new Font("Segoe UI", 11F);
+            btnfechar.ForeColor = Color.White;
+            btnfechar.Location = new Point(382, 12);
+            btnfechar.Name = "btnfechar";
+            btnfechar.Size = new Size(74, 34);
+            btnfechar.TabIndex = 3;
+            btnfechar.Text = "X";
+            btnfechar.UseVisualStyleBackColor = false;
+            btnfechar.Click += btnfechar_Click;
             // 
             // btnEntrada
             // 
@@ -95,7 +108,7 @@
             textLogin.BorderStyle = BorderStyle.None;
             textLogin.Font = new Font("Perpetua Titling MT", 18F);
             textLogin.ForeColor = Color.White;
-            textLogin.Location = new Point(99, 75);
+            textLogin.Location = new Point(102, 71);
             textLogin.Name = "textLogin";
             textLogin.Size = new Size(261, 43);
             textLogin.TabIndex = 0;
@@ -120,19 +133,6 @@
             label1.Size = new Size(257, 25);
             label1.TabIndex = 1;
             label1.Text = "___________________________________";
-            // 
-            // btnfechar
-            // 
-            btnfechar.BackColor = Color.Black;
-            btnfechar.Font = new Font("Segoe UI", 11F);
-            btnfechar.ForeColor = Color.White;
-            btnfechar.Location = new Point(382, 12);
-            btnfechar.Name = "btnfechar";
-            btnfechar.Size = new Size(74, 34);
-            btnfechar.TabIndex = 3;
-            btnfechar.Text = "X";
-            btnfechar.UseVisualStyleBackColor = false;
-            btnfechar.Click += btnfechar_Click;
             // 
             // FrmLogin
             // 

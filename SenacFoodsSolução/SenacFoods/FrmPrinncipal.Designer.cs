@@ -36,6 +36,7 @@
             button1 = new Button();
             btnfechar = new Button();
             button4 = new Button();
+            lblMensagem = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -142,12 +143,24 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
+            // lblMensagem
+            // 
+            lblMensagem.AutoSize = true;
+            lblMensagem.Font = new Font("Segoe UI", 16F);
+            lblMensagem.ForeColor = Color.White;
+            lblMensagem.Location = new Point(239, 24);
+            lblMensagem.Name = "lblMensagem";
+            lblMensagem.Size = new Size(213, 45);
+            lblMensagem.TabIndex = 3;
+            lblMensagem.Text = "lblMensagem";
+            // 
             // FrmPrinncipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(827, 432);
+            Controls.Add(lblMensagem);
             Controls.Add(button4);
             Controls.Add(btnfechar);
             Controls.Add(groupBox1);
@@ -157,6 +170,7 @@
             Text = "FrnPrinncipal";
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -169,5 +183,6 @@
         private Button button2;
         private Button btnfechar;
         private Button button4;
+        private Label lblMensagem;
     }
 }
