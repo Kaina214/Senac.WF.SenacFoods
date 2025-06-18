@@ -94,11 +94,11 @@
             // 
             textSenha.BackColor = Color.Black;
             textSenha.BorderStyle = BorderStyle.None;
-            textSenha.Font = new Font("Perpetua Titling MT", 18F);
+            textSenha.Font = new Font("Palatino Linotype", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textSenha.ForeColor = Color.White;
             textSenha.Location = new Point(99, 170);
             textSenha.Name = "textSenha";
-            textSenha.Size = new Size(261, 43);
+            textSenha.Size = new Size(261, 49);
             textSenha.TabIndex = 0;
             textSenha.Text = "Senha:";
             // 
@@ -106,11 +106,11 @@
             // 
             textLogin.BackColor = Color.Black;
             textLogin.BorderStyle = BorderStyle.None;
-            textLogin.Font = new Font("Perpetua Titling MT", 18F);
+            textLogin.Font = new Font("Perpetua", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textLogin.ForeColor = Color.White;
             textLogin.Location = new Point(102, 71);
             textLogin.Name = "textLogin";
-            textLogin.Size = new Size(261, 43);
+            textLogin.Size = new Size(261, 42);
             textLogin.TabIndex = 0;
             textLogin.Text = "Usuário:";
             // 
