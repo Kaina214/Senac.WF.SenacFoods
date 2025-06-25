@@ -35,7 +35,7 @@ namespace SenacFoods
                 //CONSULTAR A TABELA USUARIOS SELECIONANDO O USUÁRIO COM O NOME E SENHA INFORMADOS
                 var usuario = banco
                     .Usuarios
-                    .FirstOrDefault(u => u.Email == nome && u.Senha == senha);
+                    .FirstOrDefault(u => u.Email.ToLower() == nome.ToLower() && u.Senha == senha);
                 if (usuario != null)
                 {
                     // Usuário encontrado, login válido
@@ -51,18 +51,23 @@ namespace SenacFoods
             {
                 MessageBox.Show(" Login ou senha inválidos");
             }
-                return false;
-           
+            return false;
+
 
 
 
 
         }
-        
+
 
         private void btnfechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void textSenha_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

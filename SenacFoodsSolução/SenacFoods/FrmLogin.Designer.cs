@@ -101,6 +101,7 @@
             textSenha.Size = new Size(261, 49);
             textSenha.TabIndex = 0;
             textSenha.Text = "Senha:";
+            textSenha.TextChanged += textSenha_TextChanged;
             // 
             // textLogin
             // 
