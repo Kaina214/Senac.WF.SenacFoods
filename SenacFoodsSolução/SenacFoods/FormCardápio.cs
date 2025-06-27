@@ -43,5 +43,15 @@ namespace SenacFoods
                 dataGridView1.DataSource = cardapio;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnfechar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

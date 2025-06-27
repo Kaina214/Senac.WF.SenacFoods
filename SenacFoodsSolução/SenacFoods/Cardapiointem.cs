@@ -17,7 +17,7 @@ namespace SenacFoods
         public string Titulo { get; set; }
         public string Descricao { get; set; }
         public decimal Preco { get; set; }
-        public string PossuiPreparo { get; set; }
+        public bool PossuiPreparo { get; set; }
 
     
     }
