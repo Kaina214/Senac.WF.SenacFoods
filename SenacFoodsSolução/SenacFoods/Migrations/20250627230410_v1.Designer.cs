@@ -11,7 +11,7 @@ using SenacFoods;
 namespace SenacFoods.Migrations
 {
     [DbContext(typeof(ComandaDBContext))]
-    [Migration("20250613004612_v1")]
+    [Migration("20250627230410_v1")]
     partial class v1
     {
         /// <inheritdoc />
@@ -36,9 +36,8 @@ namespace SenacFoods.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("PossuiPreparo")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("PossuiPreparo")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<decimal>("Preco")
                         .HasColumnType("decimal(65,30)");

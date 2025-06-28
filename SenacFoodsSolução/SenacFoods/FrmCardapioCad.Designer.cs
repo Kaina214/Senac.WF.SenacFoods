@@ -83,6 +83,7 @@
             button1.TabIndex = 6;
             button1.Text = "X";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // textBox2
             // 
@@ -136,6 +137,7 @@
             txtPreço.Name = "txtPreço";
             txtPreço.Size = new Size(468, 31);
             txtPreço.TabIndex = 10;
+            txtPreço.TextChanged += txtPreço_TextChanged;
             // 
             // txtDescricao
             // 

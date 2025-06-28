@@ -46,7 +46,7 @@ namespace SenacFoods
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            new FrmCardapioCad().ShowDialog();
         }
 
         private void btnfechar_Click(object sender, EventArgs e)

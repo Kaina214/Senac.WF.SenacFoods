@@ -37,7 +37,7 @@ namespace SenacFoods
                 // captar os dados da tela
                 string titulo = txtTitulo.Text;
                 string descricao = txtDescricao.Text;
-             decimal.TryParse(txtPreço.Text.Trim(), out decimal preco);
+                decimal.TryParse(txtPreço.Text.Trim(), out decimal preco);
                 bool possuiPreparo = chkPossuiPreparo.Checked;
                 // criar um novo cardapio
                 var cardapio = new Cardapiointem()
@@ -55,5 +55,18 @@ namespace SenacFoods
 
 
             }
+            MessageBox.Show("Cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
-    } }
+
+        private void txtPreço_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
