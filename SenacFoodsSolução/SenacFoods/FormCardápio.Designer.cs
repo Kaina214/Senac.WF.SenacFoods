@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            btnAdicionar2 = new Button();
             dataGridView1 = new DataGridView();
+            textBox1 = new TextBox();
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
-            textBox1 = new TextBox();
             btnfechar = new Button();
-            button3 = new Button();
             panel1 = new Panel();
-            textBox2 = new TextBox();
+            textPesquisa = new TextBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -45,7 +45,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button3);
+            groupBox1.Controls.Add(btnAdicionar2);
             groupBox1.Controls.Add(dataGridView1);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Location = new Point(49, 67);
@@ -57,6 +57,18 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Cardápio";
             // 
+            // btnAdicionar2
+            // 
+            btnAdicionar2.BackColor = Color.Yellow;
+            btnAdicionar2.Location = new Point(123, 23);
+            btnAdicionar2.Margin = new Padding(4);
+            btnAdicionar2.Name = "btnAdicionar2";
+            btnAdicionar2.Size = new Size(146, 44);
+            btnAdicionar2.TabIndex = 3;
+            btnAdicionar2.Text = "+ Item";
+            btnAdicionar2.UseVisualStyleBackColor = false;
+            btnAdicionar2.Click += btnAdicionar;
+            // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -66,6 +78,14 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(836, 334);
             dataGridView1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(105, 116);
+            textBox1.Margin = new Padding(4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(475, 39);
+            textBox1.TabIndex = 4;
             // 
             // button1
             // 
@@ -100,14 +120,6 @@
             label1.TabIndex = 3;
             label1.Text = "Pesquisar";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(105, 116);
-            textBox1.Margin = new Padding(4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(475, 39);
-            textBox1.TabIndex = 4;
-            // 
             // btnfechar
             // 
             btnfechar.BackColor = Color.Black;
@@ -121,22 +133,10 @@
             btnfechar.UseVisualStyleBackColor = false;
             btnfechar.Click += btnfechar_Click;
             // 
-            // button3
-            // 
-            button3.BackColor = Color.Yellow;
-            button3.Location = new Point(123, 23);
-            button3.Margin = new Padding(4);
-            button3.Name = "button3";
-            button3.Size = new Size(146, 44);
-            button3.TabIndex = 3;
-            button3.Text = "+ Item";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.Sienna;
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(textPesquisa);
             panel1.Controls.Add(btnfechar);
             panel1.Controls.Add(label1);
             panel1.ForeColor = Color.Black;
@@ -145,12 +145,13 @@
             panel1.Size = new Size(1040, 66);
             panel1.TabIndex = 6;
             // 
-            // textBox2
+            // textPesquisa
             // 
-            textBox2.Location = new Point(141, 18);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(566, 39);
-            textBox2.TabIndex = 4;
+            textPesquisa.Location = new Point(141, 18);
+            textPesquisa.Name = "textPesquisa";
+            textPesquisa.Size = new Size(566, 39);
+            textPesquisa.TabIndex = 4;
+            textPesquisa.TextChanged += textPesquisa_TextChanged;
             // 
             // FormCardápio
             // 
@@ -183,9 +184,9 @@
         private Button button2;
         private Label label1;
         private TextBox textBox1;
-        private Button button3;
+        private Button btnAdicionar2;
         private Button btnfechar;
         private Panel panel1;
-        private TextBox textBox2;
+        private TextBox textPesquisa;
     }
 }
