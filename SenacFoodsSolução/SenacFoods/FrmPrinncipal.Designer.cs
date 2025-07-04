@@ -37,11 +37,13 @@
             btnfechar = new Button();
             button4 = new Button();
             lblMensagem = new Label();
+            button7 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(button7);
             groupBox1.Controls.Add(button5);
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(button6);
@@ -50,7 +52,7 @@
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(78, 72);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(660, 267);
+            groupBox1.Size = new Size(660, 336);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
@@ -154,6 +156,19 @@
             lblMensagem.TabIndex = 3;
             lblMensagem.Text = "lblMensagem";
             // 
+            // button7
+            // 
+            button7.BackColor = SystemColors.ControlDarkDark;
+            button7.Font = new Font("Segoe UI", 13F);
+            button7.ForeColor = Color.Black;
+            button7.Location = new Point(236, 253);
+            button7.Name = "button7";
+            button7.Size = new Size(174, 48);
+            button7.TabIndex = 4;
+            button7.Text = "Mesa";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
+            // 
             // FrmPrinncipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -184,5 +199,6 @@
         private Button btnfechar;
         private Button button4;
         private Label lblMensagem;
+        private Button button7;
     }
 }

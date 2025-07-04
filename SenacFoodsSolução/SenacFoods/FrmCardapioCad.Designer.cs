@@ -153,6 +153,7 @@
             txtTitulo.Name = "txtTitulo";
             txtTitulo.Size = new Size(483, 31);
             txtTitulo.TabIndex = 10;
+            txtTitulo.TextChanged += txtTitulo_TextChanged;
             // 
             // label4
             // 
@@ -192,6 +193,7 @@
             btnCancelar.TabIndex = 5;
             btnCancelar.Text = "x Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnSalvar
             // 

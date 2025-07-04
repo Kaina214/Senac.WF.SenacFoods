@@ -78,6 +78,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(836, 334);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
             // textBox1
             // 
@@ -109,6 +110,7 @@
             button2.TabIndex = 2;
             button2.Text = "Excluir";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -140,9 +142,9 @@
             panel1.Controls.Add(btnfechar);
             panel1.Controls.Add(label1);
             panel1.ForeColor = Color.Black;
-            panel1.Location = new Point(0, 3);
+            panel1.Location = new Point(0, -4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1040, 66);
+            panel1.Size = new Size(1040, 73);
             panel1.TabIndex = 6;
             // 
             // textPesquisa

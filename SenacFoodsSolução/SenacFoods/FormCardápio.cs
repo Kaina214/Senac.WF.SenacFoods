@@ -39,10 +39,10 @@ namespace SenacFoods
             {
                 //Consulta a tabela Cardápio
                 var cardapio = bd.CardapioItens.AsQueryable();
-                if(!string.IsNullOrEmpty(textPesquisa.Text))
+                if (!string.IsNullOrEmpty(textPesquisa.Text))
                 {
                     // Filtra os itens do cardápio com base no texto de pesquisa
-                    cardapio = cardapio.Where(c => c.Titulo.Contains(textPesquisa.Text) || 
+                    cardapio = cardapio.Where(c => c.Titulo.Contains(textPesquisa.Text) ||
                                                               c.Descricao.Contains(textPesquisa.Text));
                 }
                 //popular o DataGridView com os dados do cardápio
@@ -67,6 +67,16 @@ namespace SenacFoods
         {
             //chamar o metodo buscar cardápio
             BuscarCardápio();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
