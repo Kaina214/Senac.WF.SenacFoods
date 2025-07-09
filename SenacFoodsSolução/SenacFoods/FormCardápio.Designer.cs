@@ -32,8 +32,8 @@
             btnAdicionar2 = new Button();
             dataGridView1 = new DataGridView();
             textBox1 = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
+            btnEditar = new Button();
+            btnExluir = new Button();
             label1 = new Label();
             btnfechar = new Button();
             panel1 = new Panel();
@@ -71,14 +71,17 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(78, 70);
             dataGridView1.Margin = new Padding(4);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(836, 334);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            
             // 
             // textBox1
             // 
@@ -88,29 +91,29 @@
             textBox1.Size = new Size(475, 39);
             textBox1.TabIndex = 4;
             // 
-            // button1
+            // btnEditar
             // 
-            button1.BackColor = Color.Green;
-            button1.Location = new Point(807, 480);
-            button1.Margin = new Padding(4);
-            button1.Name = "button1";
-            button1.Size = new Size(146, 44);
-            button1.TabIndex = 1;
-            button1.Text = "Editar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnEditar.BackColor = Color.Green;
+            btnEditar.Location = new Point(807, 480);
+            btnEditar.Margin = new Padding(4);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(146, 44);
+            btnEditar.TabIndex = 1;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click_1;
             // 
-            // button2
+            // btnExluir
             // 
-            button2.BackColor = Color.IndianRed;
-            button2.Location = new Point(653, 480);
-            button2.Margin = new Padding(4);
-            button2.Name = "button2";
-            button2.Size = new Size(146, 44);
-            button2.TabIndex = 2;
-            button2.Text = "Excluir";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btnExluir.BackColor = Color.IndianRed;
+            btnExluir.Location = new Point(653, 480);
+            btnExluir.Margin = new Padding(4);
+            btnExluir.Name = "btnExluir";
+            btnExluir.Size = new Size(146, 44);
+            btnExluir.TabIndex = 2;
+            btnExluir.Text = "Excluir";
+            btnExluir.UseVisualStyleBackColor = false;
+            btnExluir.Click += btnExcluir_Click;
             // 
             // label1
             // 
@@ -161,8 +164,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1040, 576);
             Controls.Add(panel1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnExluir);
+            Controls.Add(btnEditar);
             Controls.Add(groupBox1);
             Font = new Font("Segoe UI", 12F);
             FormBorderStyle = FormBorderStyle.None;
@@ -182,8 +185,8 @@
 
         private GroupBox groupBox1;
         private DataGridView dataGridView1;
-        private Button button1;
-        private Button button2;
+        private Button btnEditar;
+        private Button btnExluir;
         private Label label1;
         private TextBox textBox1;
         private Button btnAdicionar2;

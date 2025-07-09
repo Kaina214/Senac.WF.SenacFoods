@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+﻿
 namespace SenacFoods
 {
+
     public partial class FormCardápio : Form
     {
+        Cardapioitem? cardapioSelecionado;
+
         public FormCardápio()
         {
             InitializeComponent();
@@ -22,10 +16,21 @@ namespace SenacFoods
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
+            //Click do editar
+            if (cardapioSelecionado != null)
+            {
 
+                // abrir o formulário de edição do cardápio
+                var frmEditar = new FrmCardapioCad(cardapioSelecionado);
+                frmEditar.ShowDialog();
+                // atualizar o cardápio após a edição
+                BuscarCardápio();
+                cardapioSelecionado = null;//limpa a seleção após a edição
+            }
         }
+
 
         private void FormCardápio_Load(object sender, EventArgs e)
         {
@@ -69,12 +74,37 @@ namespace SenacFoods
             BuscarCardápio();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // excluir
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
+            if (cardapioSelecionado != null)
+            {
+                using (var bancoDeDados = new ComandaDBContext())
+                {
+                    bancoDeDados.CardapioItens.Remove(cardapioSelecionado);
+                    bancoDeDados.SaveChanges();
+                }
+                MessageBox.Show("Cardápio excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BuscarCardápio();
+                cardapioSelecionado = null; // Limpa a seleção após a exclusão
+            }
+            else { MessageBox.Show("Selecione um cardápio para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+        }
+    
 
+
+        
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                cardapioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as Cardapioitem;
+
+            }
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
 
         }

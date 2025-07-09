@@ -17,6 +17,11 @@ namespace SenacFoods
             InitializeComponent();
         }
 
+        public FrmCardapioCad(Cardapioitem cardapiointem)
+        {
+            InitializeComponent();
+        }
+
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -40,7 +45,7 @@ namespace SenacFoods
                 decimal.TryParse(txtPreço.Text.Trim(), out decimal preco);
                 bool possuiPreparo = chkPossuiPreparo.Checked;
                 // criar um novo cardapio
-                var cardapio = new Cardapiointem()
+                var cardapio = new Cardapioitem()
 
                 {
                     Titulo = titulo,

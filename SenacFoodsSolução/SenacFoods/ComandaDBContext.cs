@@ -24,7 +24,7 @@ public class ComandaDBContext:DbContext
     }
 
     public DbSet<Usuario> Usuarios { get; set; }  // conjunto de usuários
-    public DbSet<Cardapiointem> CardapioItens { get; set; }// conjunto de itens do cardápio
+    public DbSet<Cardapioitem> CardapioItens { get; set; }// conjunto de itens do cardápio
     public DbSet<Mesa> Mesas { get; set; }// conjunto de mesas
     public DbSet<Comanda> Comandas { get; set; }// conjunto de comandas
     public DbSet<Comandaitem> ComandaItens { get; set; } // conjunto de itens da comanda
