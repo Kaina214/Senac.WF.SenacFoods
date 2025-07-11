@@ -81,7 +81,6 @@
             dataGridView1.Size = new Size(836, 334);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellClick;
-            
             // 
             // textBox1
             // 
@@ -101,7 +100,7 @@
             btnEditar.TabIndex = 1;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = false;
-            btnEditar.Click += btnEditar_Click_1;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnExluir
             // 

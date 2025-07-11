@@ -100,6 +100,7 @@ namespace SenacFoods
             if (e.RowIndex > -1)
             {
                 cardapioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as Cardapioitem;
+                btnEditar.Enabled = true;
 
             }
         }
