@@ -51,7 +51,7 @@ namespace SenacFoods
                                                               c.Descricao.Contains(textPesquisa.Text));
                 }
                 //popular o DataGridView com os dados do cardápio
-                dataGridView1.DataSource = cardapio.ToList();
+                dataGridView1.DataSource = usuario.ToList();
             }
         }
 
@@ -90,10 +90,10 @@ namespace SenacFoods
             }
             else { MessageBox.Show("Selecione um cardápio para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
-    
 
 
-        
+
+
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -109,5 +109,7 @@ namespace SenacFoods
         {
 
         }
+
+       
     }
 }

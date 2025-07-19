@@ -34,9 +34,9 @@
             BtnAdicionar = new Button();
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
+            btnfechar = new Button();
             TextUsuario = new TextBox();
             TextPesquisarUsuario = new TextBox();
-            btnfechar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -51,6 +51,7 @@
             BtnEditar.TabIndex = 0;
             BtnEditar.Text = "Editar";
             BtnEditar.UseVisualStyleBackColor = false;
+            BtnEditar.Click += BtnEditar_Click;
             // 
             // BtnExcluir
             // 
@@ -65,9 +66,10 @@
             // 
             // textBox1
             // 
+            textBox1.BorderStyle = BorderStyle.None;
             textBox1.Location = new Point(265, 112);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(487, 31);
+            textBox1.Size = new Size(487, 24);
             textBox1.TabIndex = 2;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -80,6 +82,7 @@
             BtnAdicionar.TabIndex = 3;
             BtnAdicionar.Text = "Add";
             BtnAdicionar.UseVisualStyleBackColor = false;
+            BtnAdicionar.Click += BtnAdicionar_Click;
             // 
             // dataGridView1
             // 
@@ -100,6 +103,19 @@
             panel1.Size = new Size(801, 85);
             panel1.TabIndex = 5;
             // 
+            // btnfechar
+            // 
+            btnfechar.BackColor = Color.Black;
+            btnfechar.Font = new Font("Segoe UI", 11F);
+            btnfechar.ForeColor = Color.White;
+            btnfechar.Location = new Point(746, 3);
+            btnfechar.Name = "btnfechar";
+            btnfechar.Size = new Size(55, 48);
+            btnfechar.TabIndex = 7;
+            btnfechar.Text = "X";
+            btnfechar.UseVisualStyleBackColor = false;
+            btnfechar.Click += btnfechar_Click;
+            // 
             // TextUsuario
             // 
             TextUsuario.BackColor = Color.Green;
@@ -113,23 +129,12 @@
             // 
             // TextPesquisarUsuario
             // 
+            TextPesquisarUsuario.BorderStyle = BorderStyle.None;
             TextPesquisarUsuario.Location = new Point(123, 109);
             TextPesquisarUsuario.Name = "TextPesquisarUsuario";
-            TextPesquisarUsuario.Size = new Size(150, 31);
+            TextPesquisarUsuario.Size = new Size(150, 24);
             TextPesquisarUsuario.TabIndex = 6;
             TextPesquisarUsuario.Text = "Pesquisar Usuário";
-            // 
-            // btnfechar
-            // 
-            btnfechar.BackColor = Color.Black;
-            btnfechar.Font = new Font("Segoe UI", 11F);
-            btnfechar.ForeColor = Color.White;
-            btnfechar.Location = new Point(746, 3);
-            btnfechar.Name = "btnfechar";
-            btnfechar.Size = new Size(55, 48);
-            btnfechar.TabIndex = 7;
-            btnfechar.Text = "X";
-            btnfechar.UseVisualStyleBackColor = false;
             // 
             // FrmUsuario
             // 
@@ -146,6 +151,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmUsuario";
             Text = "FrmUsuario";
+            Load += FrmUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
