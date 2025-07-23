@@ -1,24 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SenacFoods
+﻿namespace SenacFoods
 {
     public partial class FrmCardapioCad : Form
     {
-        private Cardapioitem _cardapioItem;
+        private usuarioItem _cardapioItem;
         public FrmCardapioCad()
         {
             InitializeComponent();
         }
 
-        public FrmCardapioCad(Cardapioitem cardapiointem)
+        public FrmCardapioCad(usuarioItem cardapiointem)
         {
             _cardapioItem = cardapiointem;
             InitializeComponent();
@@ -90,7 +80,7 @@ namespace SenacFoods
                 decimal.TryParse(txtPreço.Text.Trim(), out decimal preco);
                 bool possuiPreparo = chkPossuiPreparo.Checked;
                 // criar um novo cardapio
-                var cardapio = new Cardapioitem()
+                var cardapio = new usuarioItem()
 
                 {
                     Titulo = titulo,

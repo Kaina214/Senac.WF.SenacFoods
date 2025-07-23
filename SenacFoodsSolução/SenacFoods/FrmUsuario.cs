@@ -14,10 +14,13 @@ namespace SenacFoods
     public partial class FrmUsuario : Form
     {
         Usuario? SelecionarUsuario;
+
         public FrmUsuario()
         {
             InitializeComponent();
         }
+
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -43,15 +46,15 @@ namespace SenacFoods
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             //Click do editar
-            if (cardapioSelecionado != null)
+            if (SelecionarUsuario != null)
             {
 
                 // abrir o formulário de edição do cardápio
-                var frmEditar = new FrmCardapioCad(cardapioSelecionado);
+                var frmEditar = new FrmUsuarioCad(SelecionarUsuario);
                 frmEditar.ShowDialog();
                 // atualizar o cardápio após a edição
-                BuscarCardápio();
-                cardapioSelecionado = null;//limpa a seleção após a edição
+                BuscarUsuario();
+                SelecionarUsuario = null;//limpa a seleção após a edição
             }
         }
 
@@ -65,17 +68,19 @@ namespace SenacFoods
             // Conecta ao banco de dados
             using (var bd = new ComandaDBContext())
             {
-                //Consulta a tabela Cardápio
-                var usuario = bd.UsuarioAdd.AsQueryable();
-                if (!string.IsNullOrEmpty(textPesquisarUsuario.Text))
+                //Consulta a tabela Usuário
+                var usuario = bd.Usuarios.AsQueryable();
+                if (!string.IsNullOrEmpty(TextUsuario.Text))
                 {
-                    // Filtra os itens do cardápio com base no texto de pesquisa
-                    usuario = usuario.Where(u => u.NomeCompleto.Contains(textNomeCompleto.Text) ||
-                                                              u.Descricao.Contains(textNomeCompleto.Text));
+                    // Filtra os itens do Usuário com base no texto de pesquisa
+                    usuario = usuario.Where(u => u.NomeCompleto.Contains(textNomeCompleto.Text));
+                    
                 }
                 //popular o DataGridView com os dados do cardápio
-                dataGridView1.DataSource = cardapio.ToList();
+                dataGridView1.DataSource = usuario.ToList();
             }
         }
+
+        
     }
 }

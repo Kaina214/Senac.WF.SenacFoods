@@ -1,22 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace SenacFoods
+﻿namespace SenacFoods
 {
     public partial class FrmUsuarioCad : Form
     {
-        public FrmUsuarioCad()
+        private Usuario _usuarioItem;
+        public FrmUsuarioCad(Usuario? selecionarUsuario)
         {
             InitializeComponent();
         }
 
+        public FrmUsuarioCad()
+        {
+        }
+        private void CarregarDadosNaTela()
+        {
+            //popular os campos de texto e checkbox
+            if (_usuario != null)
+            {
+                TxtNomeCompleto.Text = _usuarioItem.NomeCompleto;
+                comboBoxPerfilDoUsuario.comboBox = _usuarioItem.PerfilDoUsuário;
+                TxtEMail.Text = _usuarioItem.EMail;
+                TextSenha.Text = _usuarioItem.Senha;
+                TextConfirmacaoDeSenha.Text = _usuarioItem.ConfirmacaoDeSenha;
+            }
+        }
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
@@ -25,6 +31,20 @@ namespace SenacFoods
         private void btnfechar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnsalvar_Click(object sender, EventArgs e)
+        {
+            //INSERIR
+            if (_usuarioItem == null)
+            {
+                InserirUsuario();
+            }
+            //ATUALIZAR
+            else
+            {
+                AtualizarUsuario();
+            }
         }
     }
 }

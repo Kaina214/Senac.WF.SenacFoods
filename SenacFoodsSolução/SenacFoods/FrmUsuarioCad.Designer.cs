@@ -28,45 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
+            BtnCancelar = new Button();
+            BtnSalvar = new Button();
             panel1 = new Panel();
-            textBox1 = new TextBox();
             btnfechar = new Button();
+            textBox1 = new TextBox();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            TxtNomeCompleto = new TextBox();
             textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            TxtEMail = new TextBox();
             textBox7 = new TextBox();
-            textBox8 = new TextBox();
+            TextSenha = new TextBox();
             textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            comboBox1 = new ComboBox();
+            TextConfirmacaoDeSenha = new TextBox();
+            TxtPerfilDoUsuário = new TextBox();
+            comboBoxPerfilDoUsuario = new ComboBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
+            // BtnCancelar
             // 
-            button1.BackColor = Color.Red;
-            button1.ForeColor = Color.FloralWhite;
-            button1.Location = new Point(555, 367);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 37);
-            button1.TabIndex = 0;
-            button1.Text = "Cancelar";
-            button1.UseVisualStyleBackColor = false;
+            BtnCancelar.BackColor = Color.Red;
+            BtnCancelar.ForeColor = Color.FloralWhite;
+            BtnCancelar.Location = new Point(555, 367);
+            BtnCancelar.Name = "BtnCancelar";
+            BtnCancelar.Size = new Size(112, 37);
+            BtnCancelar.TabIndex = 0;
+            BtnCancelar.Text = "Cancelar";
+            BtnCancelar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // BtnSalvar
             // 
-            button2.BackColor = Color.Gold;
-            button2.Location = new Point(673, 370);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 34);
-            button2.TabIndex = 1;
-            button2.Text = "Salvar";
-            button2.UseVisualStyleBackColor = false;
+            BtnSalvar.BackColor = Color.Gold;
+            BtnSalvar.Location = new Point(673, 370);
+            BtnSalvar.Name = "BtnSalvar";
+            BtnSalvar.Size = new Size(112, 34);
+            BtnSalvar.TabIndex = 1;
+            BtnSalvar.Text = "Salvar";
+            BtnSalvar.UseVisualStyleBackColor = false;
+            
             // 
             // panel1
             // 
@@ -77,18 +78,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(799, 94);
             panel1.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = Color.DarkGreen;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.ForeColor = Color.Transparent;
-            textBox1.Location = new Point(44, 35);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(150, 32);
-            textBox1.TabIndex = 3;
-            textBox1.Text = "Cad Usurario";
             // 
             // btnfechar
             // 
@@ -102,6 +91,18 @@
             btnfechar.Text = "X";
             btnfechar.UseVisualStyleBackColor = false;
             btnfechar.Click += btnfechar_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.DarkGreen;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Segoe UI", 12F);
+            textBox1.ForeColor = Color.Transparent;
+            textBox1.Location = new Point(44, 35);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(150, 32);
+            textBox1.TabIndex = 3;
+            textBox1.Text = "Cad Usurario";
             // 
             // textBox2
             // 
@@ -126,13 +127,13 @@
             textBox3.Text = "Nome Completo :";
             textBox3.TextChanged += textBox3_TextChanged;
             // 
-            // textBox4
+            // TxtNomeCompleto
             // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Location = new Point(176, 167);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(259, 24);
-            textBox4.TabIndex = 5;
+            TxtNomeCompleto.BorderStyle = BorderStyle.None;
+            TxtNomeCompleto.Location = new Point(176, 167);
+            TxtNomeCompleto.Name = "TxtNomeCompleto";
+            TxtNomeCompleto.Size = new Size(259, 24);
+            TxtNomeCompleto.TabIndex = 5;
             // 
             // textBox5
             // 
@@ -145,12 +146,12 @@
             textBox5.TabIndex = 6;
             textBox5.Text = "E - Mail :";
             // 
-            // textBox6
+            // TxtEMail
             // 
-            textBox6.Location = new Point(560, 164);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(128, 31);
-            textBox6.TabIndex = 7;
+            TxtEMail.Location = new Point(560, 164);
+            TxtEMail.Name = "TxtEMail";
+            TxtEMail.Size = new Size(128, 31);
+            TxtEMail.TabIndex = 7;
             // 
             // textBox7
             // 
@@ -163,13 +164,13 @@
             textBox7.TabIndex = 8;
             textBox7.Text = "Senha :";
             // 
-            // textBox8
+            // TextSenha
             // 
-            textBox8.BorderStyle = BorderStyle.None;
-            textBox8.Location = new Point(516, 243);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(179, 24);
-            textBox8.TabIndex = 9;
+            TextSenha.BorderStyle = BorderStyle.None;
+            TextSenha.Location = new Point(516, 243);
+            TextSenha.Name = "TextSenha";
+            TextSenha.Size = new Size(179, 24);
+            TextSenha.TabIndex = 9;
             // 
             // textBox9
             // 
@@ -182,31 +183,31 @@
             textBox9.TabIndex = 10;
             textBox9.Text = "Confirmação de senha :";
             // 
-            // textBox10
+            // TextConfirmacaoDeSenha
             // 
-            textBox10.Location = new Point(526, 294);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(183, 31);
-            textBox10.TabIndex = 11;
+            TextConfirmacaoDeSenha.Location = new Point(526, 294);
+            TextConfirmacaoDeSenha.Name = "TextConfirmacaoDeSenha";
+            TextConfirmacaoDeSenha.Size = new Size(183, 31);
+            TextConfirmacaoDeSenha.TabIndex = 11;
             // 
-            // textBox11
+            // TxtPerfilDoUsuário
             // 
-            textBox11.BackColor = Color.DarkGray;
-            textBox11.Font = new Font("Segoe UI", 10F);
-            textBox11.Location = new Point(16, 223);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(164, 34);
-            textBox11.TabIndex = 12;
-            textBox11.Text = "Perfil do Usuário :";
+            TxtPerfilDoUsuário.BackColor = Color.DarkGray;
+            TxtPerfilDoUsuário.Font = new Font("Segoe UI", 10F);
+            TxtPerfilDoUsuário.Location = new Point(16, 223);
+            TxtPerfilDoUsuário.Name = "TxtPerfilDoUsuário";
+            TxtPerfilDoUsuário.Size = new Size(164, 34);
+            TxtPerfilDoUsuário.TabIndex = 12;
+            TxtPerfilDoUsuário.Text = "Perfil do Usuário :";
             // 
-            // comboBox1
+            // comboBoxPerfilDoUsuario
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Programador", "Adiministrador", "Técnico", "Operador" });
-            comboBox1.Location = new Point(206, 223);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
-            comboBox1.TabIndex = 13;
+            comboBoxPerfilDoUsuario.FormattingEnabled = true;
+            comboBoxPerfilDoUsuario.Items.AddRange(new object[] { "Programador", "Adiministrador", "Técnico", "Operador" });
+            comboBoxPerfilDoUsuario.Location = new Point(206, 223);
+            comboBoxPerfilDoUsuario.Name = "comboBoxPerfilDoUsuario";
+            comboBoxPerfilDoUsuario.Size = new Size(182, 33);
+            comboBoxPerfilDoUsuario.TabIndex = 13;
             // 
             // FrmUsuarioCad
             // 
@@ -214,20 +215,20 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkGray;
             ClientSize = new Size(800, 450);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox11);
-            Controls.Add(textBox10);
+            Controls.Add(comboBoxPerfilDoUsuario);
+            Controls.Add(TxtPerfilDoUsuário);
+            Controls.Add(TextConfirmacaoDeSenha);
             Controls.Add(textBox9);
-            Controls.Add(textBox8);
+            Controls.Add(TextSenha);
             Controls.Add(textBox7);
-            Controls.Add(textBox6);
+            Controls.Add(TxtEMail);
             Controls.Add(textBox5);
-            Controls.Add(textBox4);
+            Controls.Add(TxtNomeCompleto);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(panel1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(BtnSalvar);
+            Controls.Add(BtnCancelar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmUsuarioCad";
             StartPosition = FormStartPosition.CenterScreen;
@@ -240,21 +241,21 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button BtnCancelar;
+        private Button BtnSalvar;
         private Panel panel1;
         private TextBox textBox1;
         private Button btnfechar;
         private TextBox textBox2;
         private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox TxtNomeCompleto;
         private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox TxtEMail;
         private TextBox textBox7;
-        private TextBox textBox8;
+        private TextBox TextSenha;
         private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private ComboBox comboBox1;
+        private TextBox TextConfirmacaoDeSenha;
+        private TextBox TxtPerfilDoUsuário;
+        private ComboBox comboBoxPerfilDoUsuario;
     }
 }

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SenacFoods
 {
-    public class Cardapioitem
+    public class usuarioItem
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

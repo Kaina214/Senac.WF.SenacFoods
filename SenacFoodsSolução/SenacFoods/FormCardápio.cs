@@ -4,7 +4,7 @@ namespace SenacFoods
 
     public partial class FormCardápio : Form
     {
-        Cardapioitem? cardapioSelecionado;
+        usuarioItem? cardapioSelecionado;
 
         public FormCardápio()
         {
@@ -51,7 +51,7 @@ namespace SenacFoods
                                                               c.Descricao.Contains(textPesquisa.Text));
                 }
                 //popular o DataGridView com os dados do cardápio
-                dataGridView1.DataSource = usuario.ToList();
+                dataGridView1.DataSource = cardapio.ToList();
             }
         }
 
@@ -99,7 +99,7 @@ namespace SenacFoods
         {
             if (e.RowIndex > -1)
             {
-                cardapioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as Cardapioitem;
+                cardapioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as usuarioItem;
                 btnEditar.Enabled = true;
 
             }

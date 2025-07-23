@@ -30,13 +30,14 @@
         {
             BtnEditar = new Button();
             BtnExcluir = new Button();
-            textBox1 = new TextBox();
+            TxtUsuario = new TextBox();
             BtnAdicionar = new Button();
             dataGridView1 = new DataGridView();
             panel1 = new Panel();
             btnfechar = new Button();
             TextUsuario = new TextBox();
             TextPesquisarUsuario = new TextBox();
+            textNomeCompleto = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -64,14 +65,14 @@
             BtnExcluir.UseVisualStyleBackColor = false;
             BtnExcluir.Click += button2_Click;
             // 
-            // textBox1
+            // TxtUsuario
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(265, 112);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(487, 24);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            TxtUsuario.BorderStyle = BorderStyle.None;
+            TxtUsuario.Location = new Point(287, 182);
+            TxtUsuario.Name = "TxtUsuario";
+            TxtUsuario.Size = new Size(487, 24);
+            TxtUsuario.TabIndex = 2;
+            TxtUsuario.TextChanged += textBox1_TextChanged;
             // 
             // BtnAdicionar
             // 
@@ -136,21 +137,28 @@
             TextPesquisarUsuario.TabIndex = 6;
             TextPesquisarUsuario.Text = "Pesquisar Usuário";
             // 
+            // textNomeCompleto
+            // 
+            textNomeCompleto.Location = new Point(279, 109);
+            textNomeCompleto.Name = "textNomeCompleto";
+            textNomeCompleto.Size = new Size(351, 31);
+            textNomeCompleto.TabIndex = 7;
+            // 
             // FrmUsuario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textNomeCompleto);
             Controls.Add(TextPesquisarUsuario);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Controls.Add(BtnAdicionar);
-            Controls.Add(textBox1);
+            Controls.Add(TxtUsuario);
             Controls.Add(BtnExcluir);
             Controls.Add(BtnEditar);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmUsuario";
-            Text = "FrmUsuario";
             Load += FrmUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
@@ -163,12 +171,13 @@
 
         private Button BtnEditar;
         private Button BtnExcluir;
-        private TextBox textBox1;
+        private TextBox TxtUsuario;
         private Button BtnAdicionar;
         private DataGridView dataGridView1;
         private Panel panel1;
         private TextBox TextUsuario;
         private TextBox TextPesquisarUsuario;
         private Button btnfechar;
+        private TextBox textNomeCompleto;
     }
 }
