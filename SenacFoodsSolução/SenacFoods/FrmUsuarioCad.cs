@@ -2,7 +2,7 @@
 {
     public partial class FrmUsuarioCad : Form
     {
-        private Usuario _usuarioItem;
+        private Usuario _usuario;
         public FrmUsuarioCad(Usuario? selecionarUsuario)
         {
             InitializeComponent();
@@ -16,11 +16,11 @@
             //popular os campos de texto e checkbox
             if (_usuario != null)
             {
-                TxtNomeCompleto.Text = _usuarioItem.NomeCompleto;
-                comboBoxPerfilDoUsuario.comboBox = _usuarioItem.PerfilDoUsuário;
-                TxtEMail.Text = _usuarioItem.EMail;
-                TextSenha.Text = _usuarioItem.Senha;
-                TextConfirmacaoDeSenha.Text = _usuarioItem.ConfirmacaoDeSenha;
+                TxtNomeCompleto.Text = _usuario.Nome;
+                //comboBoxPerfilDoUsuario. = _usuario.PerfilDoUsuário;
+                TxtEMail.Text = _usuario.Email;
+                TextSenha.Text = _usuario.Senha;
+                
             }
         }
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -36,7 +36,7 @@
         private void btnsalvar_Click(object sender, EventArgs e)
         {
             //INSERIR
-            if (_usuarioItem == null)
+            if (_usuario == null)
             {
                 InserirUsuario();
             }
@@ -45,6 +45,29 @@
             {
                 AtualizarUsuario();
             }
+        }
+
+        private void AtualizarUsuario()
+        {
+            using (var banco = new ComandaDBContext())
+            {
+                //captar os dados da tela
+                string NomeCompleto = TxtNomeCompleto.Text;
+                string EMail = TxtEMail.Text;
+                string Senha = TextSenha.Text;
+                
+                var usuario = banco.Usuarios.First(x => x.Id == _usuario.Id);
+                usuario.Nome = NomeCompleto;
+                usuario.Email = EMail;
+                usuario.Senha = Senha;
+                
+
+            }
+        }
+
+        private void InserirUsuario()
+        {
+            
         }
     }
 }

@@ -55,7 +55,7 @@
                 //captar os dados da tela
                 string titulo = txtTitulo.Text;
                 string descricao = txtDescricao.Text;
-                decimal.TryParse(txtPreco.Text, out var preco);
+                decimal.TryParse(txtPreço.Text, out var preco);
                 bool possuiPreparo = chkPossuiPreparo.Checked
                     //atualizar o cardapio
                 var cardapioItem = banco.CardapioItens.First(x => x.Id == _cardapioItem.Id);
