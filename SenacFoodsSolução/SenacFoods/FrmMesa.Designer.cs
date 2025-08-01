@@ -30,11 +30,11 @@
         {
             btnAdicionarMesa = new Button();
             panel1 = new Panel();
-            btnfechar = new Button();
+            btnVoltar = new Button();
             textPesquisaMesa = new TextBox();
             label1 = new Label();
             groupBox1 = new GroupBox();
-            button2 = new Button();
+            btnEditar = new Button();
             button1 = new Button();
             dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
@@ -51,12 +51,11 @@
             btnAdicionarMesa.TabIndex = 0;
             btnAdicionarMesa.Text = "+ item";
             btnAdicionarMesa.UseVisualStyleBackColor = false;
-            btnAdicionarMesa.Click += btnAdicionarMesa_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.Crimson;
-            panel1.Controls.Add(btnfechar);
+            panel1.Controls.Add(btnVoltar);
             panel1.Controls.Add(textPesquisaMesa);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, -1);
@@ -64,18 +63,18 @@
             panel1.Size = new Size(800, 95);
             panel1.TabIndex = 1;
             // 
-            // btnfechar
+            // btnVoltar
             // 
-            btnfechar.BackColor = Color.Black;
-            btnfechar.Font = new Font("Segoe UI", 11F);
-            btnfechar.ForeColor = Color.White;
-            btnfechar.Location = new Point(733, 13);
-            btnfechar.Name = "btnfechar";
-            btnfechar.Size = new Size(55, 48);
-            btnfechar.TabIndex = 6;
-            btnfechar.Text = "X";
-            btnfechar.UseVisualStyleBackColor = false;
-            btnfechar.Click += btnfechar_Click;
+            btnVoltar.BackColor = Color.Black;
+            btnVoltar.Font = new Font("Segoe UI", 9F);
+            btnVoltar.ForeColor = Color.White;
+            btnVoltar.Location = new Point(725, 3);
+            btnVoltar.Name = "btnVoltar";
+            btnVoltar.Size = new Size(72, 40);
+            btnVoltar.TabIndex = 6;
+            btnVoltar.Text = "Voltar";
+            btnVoltar.UseVisualStyleBackColor = false;
+            btnVoltar.Click += btnVoltar_Click;
             // 
             // textPesquisaMesa
             // 
@@ -99,7 +98,7 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(btnEditar);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(dataGridView1);
             groupBox1.Controls.Add(btnAdicionarMesa);
@@ -111,15 +110,15 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Mesa";
             // 
-            // button2
+            // btnEditar
             // 
-            button2.BackColor = Color.DarkGoldenrod;
-            button2.Location = new Point(676, 324);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 34);
-            button2.TabIndex = 3;
-            button2.Text = "Editar";
-            button2.UseVisualStyleBackColor = false;
+            btnEditar.BackColor = Color.DarkGoldenrod;
+            btnEditar.Location = new Point(676, 324);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(112, 34);
+            btnEditar.TabIndex = 3;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -166,7 +165,7 @@
         private GroupBox groupBox1;
         private DataGridView dataGridView1;
         private Button button1;
-        private Button button2;
-        private Button btnfechar;
+        private Button btnEditar;
+        private Button btnVoltar;
     }
 }

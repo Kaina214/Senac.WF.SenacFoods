@@ -56,7 +56,7 @@
                 string titulo = txtTitulo.Text;
                 string descricao = txtDescricao.Text;
                 decimal.TryParse(txtPreço.Text, out var preco);
-                bool possuiPreparo = chkPossuiPreparo.Checked
+                bool possuiPreparo = chkPossuiPreparo.Checked;
                     //atualizar o cardapio
                 var cardapioItem = banco.CardapioItens.First(x => x.Id == _cardapioItem.Id);
                 cardapioItem.Titulo = titulo;
