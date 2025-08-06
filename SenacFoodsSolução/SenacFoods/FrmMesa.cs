@@ -45,7 +45,7 @@ namespace SenacFoods
                 //consulta a tabela Mesa
                 var mesas = bd.Mesas.AsQueryable();
 
-                int.TryParse(txtNumeroMesa.Text, out int numeromesa); // converte o texto do campo txtNumeroMesa para um inteiro
+                int.TryParse(textPesquisaMesa.Text, out int numeromesa); // converte o texto do campo txtNumeroMesa para um inteiro
                 if (!string.IsNullOrWhiteSpace(textPesquisaMesa.Text))
                 {
                     mesas = mesas.Where(c => c.NumeroMesa == numeromesa); //
@@ -55,7 +55,7 @@ namespace SenacFoods
             }
         }
 
-        private void btnAdicionarMesa_Click(object sender, EventArgs e)
+        private void BtnAdicionarMesa_Click(object sender, EventArgs e)
         {
             SalvarMesa(); // chama o método para salvar a mesa
             BuscarMesa(); // chama o método para buscar as mesas atualizadas

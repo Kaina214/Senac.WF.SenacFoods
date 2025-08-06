@@ -9,13 +9,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SenacFoods
 {
-    public class usuarioItem
+    public class mesaItem
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public  int Id { get; set; }
-        public string Titulo { get; set; }
-        public string Descricao { get; set; }
+        public string NumeroMesa { get; set; }
+        public string SituacaoMesa { get; set; }
         public decimal Preco { get; set; }
         public bool PossuiPreparo { get; set; }
 

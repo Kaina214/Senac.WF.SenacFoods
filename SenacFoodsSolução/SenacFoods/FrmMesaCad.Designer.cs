@@ -30,7 +30,7 @@
         {
             panel1 = new Panel();
             btnFechar2 = new Button();
-            textBox1 = new TextBox();
+            textPesquisa = new TextBox();
             label1 = new Label();
             groupBox1 = new GroupBox();
             textNumeroMesa = new TextBox();
@@ -45,7 +45,7 @@
             // 
             panel1.BackColor = Color.DarkGoldenrod;
             panel1.Controls.Add(btnFechar2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(textPesquisa);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, -7);
             panel1.Name = "panel1";
@@ -65,13 +65,13 @@
             btnFechar2.UseVisualStyleBackColor = false;
             btnFechar2.Click += button1_Click;
             // 
-            // textBox1
+            // textPesquisa
             // 
-            textBox1.Font = new Font("Segoe UI", 11F);
-            textBox1.Location = new Point(174, 41);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(490, 37);
-            textBox1.TabIndex = 1;
+            textPesquisa.Font = new Font("Segoe UI", 11F);
+            textPesquisa.Location = new Point(174, 41);
+            textPesquisa.Name = "textPesquisa";
+            textPesquisa.Size = new Size(490, 37);
+            textPesquisa.TabIndex = 1;
             // 
             // label1
             // 
@@ -96,20 +96,19 @@
             // 
             // textNumeroMesa
             // 
-            textNumeroMesa.Location = new Point(136, 71);
+            textNumeroMesa.Location = new Point(174, 71);
             textNumeroMesa.Name = "textNumeroMesa";
             textNumeroMesa.Size = new Size(374, 31);
             textNumeroMesa.TabIndex = 1;
-            textNumeroMesa.Click += textNumeroMesa_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(85, 43);
+            label2.Location = new Point(30, 71);
             label2.Name = "label2";
-            label2.Size = new Size(56, 25);
+            label2.Size = new Size(124, 25);
             label2.TabIndex = 0;
-            label2.Text = "Título";
+            label2.Text = "Numero Mesa";
             // 
             // btnCancelarMesa
             // 
@@ -132,7 +131,7 @@
             btnSalvarMesa.TabIndex = 7;
             btnSalvarMesa.Text = "* Salvar";
             btnSalvarMesa.UseVisualStyleBackColor = false;
-            btnSalvarMesa.Click += btnSalvar_Click;
+            btnSalvarMesa.Click += btnSalvarMesa_Click;
             // 
             // FrmMesaCad
             // 
@@ -157,7 +156,7 @@
 
         private Panel panel1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox textPesquisa;
         private Button btnFechar2;
         private GroupBox groupBox1;
         private Label label2;

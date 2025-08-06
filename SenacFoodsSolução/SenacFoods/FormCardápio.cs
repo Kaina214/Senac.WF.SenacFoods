@@ -4,7 +4,7 @@ namespace SenacFoods
 
     public partial class FormCardápio : Form
     {
-        usuarioItem? cardapioSelecionado;
+        mesaItem? cardapioSelecionado;
 
         public FormCardápio()
         {
@@ -43,12 +43,12 @@ namespace SenacFoods
             using (var bd = new ComandaDBContext())
             {
                 //Consulta a tabela Cardápio
-                var cardapio = bd.CardapioItens.AsQueryable();
+                var cardapio = bd.Mesa.AsQueryable();
                 if (!string.IsNullOrEmpty(textPesquisa.Text))
                 {
                     // Filtra os itens do cardápio com base no texto de pesquisa
-                    cardapio = cardapio.Where(c => c.Titulo.Contains(textPesquisa.Text) ||
-                                                              c.Descricao.Contains(textPesquisa.Text));
+                    cardapio = cardapio.Where(c => c.NumeroMesa.Contains(textPesquisa.Text) ||
+                                                              c.SituacaoMesa.Contains(textPesquisa.Text));
                 }
                 //popular o DataGridView com os dados do cardápio
                 dataGridView1.DataSource = cardapio.ToList();
@@ -81,7 +81,7 @@ namespace SenacFoods
             {
                 using (var bancoDeDados = new ComandaDBContext())
                 {
-                    bancoDeDados.CardapioItens.Remove(cardapioSelecionado);
+                    bancoDeDados.Mesa.Remove(cardapioSelecionado);
                     bancoDeDados.SaveChanges();
                 }
                 MessageBox.Show("Cardápio excluído com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -99,7 +99,7 @@ namespace SenacFoods
         {
             if (e.RowIndex > -1)
             {
-                cardapioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as usuarioItem;
+                cardapioSelecionado = dataGridView1.Rows[e.RowIndex].DataBoundItem as mesaItem;
                 btnEditar.Enabled = true;
 
             }

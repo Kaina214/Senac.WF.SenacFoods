@@ -2,13 +2,13 @@
 {
     public partial class FrmCardapioCad : Form
     {
-        private usuarioItem _cardapioItem;
+        private mesaItem _cardapioItem;
         public FrmCardapioCad()
         {
             InitializeComponent();
         }
 
-        public FrmCardapioCad(usuarioItem cardapiointem)
+        public FrmCardapioCad(mesaItem cardapiointem)
         {
             _cardapioItem = cardapiointem;
             InitializeComponent();
@@ -22,8 +22,8 @@
             //popular os campos de texto e checkbox
             if (_cardapioItem != null)
             {
-                txtTitulo.Text = _cardapioItem.Titulo;
-                txtDescricao.Text = _cardapioItem.Descricao;
+                txtTitulo.Text = _cardapioItem.NumeroMesa;
+                txtDescricao.Text = _cardapioItem.SituacaoMesa;
                 txtPreço.Text = _cardapioItem.Preco.ToString("F2");
                 chkPossuiPreparo.Checked = _cardapioItem.PossuiPreparo;
             }
@@ -58,9 +58,9 @@
                 decimal.TryParse(txtPreço.Text, out var preco);
                 bool possuiPreparo = chkPossuiPreparo.Checked;
                     //atualizar o cardapio
-                var cardapioItem = banco.CardapioItens.First(x => x.Id == _cardapioItem.Id);
-                cardapioItem.Titulo = titulo;
-                cardapioItem.Descricao = descricao;
+                var cardapioItem = banco.Mesa.First(x => x.Id == _cardapioItem.Id);
+                cardapioItem.NumeroMesa = titulo;
+                cardapioItem.SituacaoMesa = descricao;
                 cardapioItem.Preco = preco;
                 cardapioItem.PossuiPreparo = possuiPreparo;
 
@@ -80,16 +80,16 @@
                 decimal.TryParse(txtPreço.Text.Trim(), out decimal preco);
                 bool possuiPreparo = chkPossuiPreparo.Checked;
                 // criar um novo cardapio
-                var cardapio = new usuarioItem()
+                var cardapio = new mesaItem()
 
                 {
-                    Titulo = titulo,
-                    Descricao = descricao,
+                    NumeroMesa = titulo,
+                    SituacaoMesa = descricao,
                     Preco = preco,
                     PossuiPreparo = possuiPreparo
                 };
                 // adicionar o cardapio
-                banco.CardapioItens.Add(cardapio);
+                banco.Mesa.Add(cardapio);
                 banco.SaveChanges();
                 // salvar as alterações no banco
 

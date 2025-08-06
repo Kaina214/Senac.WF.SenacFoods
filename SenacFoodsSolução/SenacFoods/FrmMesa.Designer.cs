@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnAdicionarMesa = new Button();
+            BtnAdicionarMesa = new Button();
             panel1 = new Panel();
             btnVoltar = new Button();
             textPesquisaMesa = new TextBox();
@@ -42,15 +42,15 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // btnAdicionarMesa
+            // BtnAdicionarMesa
             // 
-            btnAdicionarMesa.BackColor = Color.Orange;
-            btnAdicionarMesa.Location = new Point(74, 7);
-            btnAdicionarMesa.Name = "btnAdicionarMesa";
-            btnAdicionarMesa.Size = new Size(112, 45);
-            btnAdicionarMesa.TabIndex = 0;
-            btnAdicionarMesa.Text = "+ item";
-            btnAdicionarMesa.UseVisualStyleBackColor = false;
+            BtnAdicionarMesa.BackColor = Color.Orange;
+            BtnAdicionarMesa.Location = new Point(74, 7);
+            BtnAdicionarMesa.Name = "BtnAdicionarMesa";
+            BtnAdicionarMesa.Size = new Size(112, 45);
+            BtnAdicionarMesa.TabIndex = 0;
+            BtnAdicionarMesa.Text = "+ item";
+            BtnAdicionarMesa.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -101,7 +101,7 @@
             groupBox1.Controls.Add(btnEditar);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Controls.Add(btnAdicionarMesa);
+            groupBox1.Controls.Add(BtnAdicionarMesa);
             groupBox1.Font = new Font("Segoe UI", 11F);
             groupBox1.Location = new Point(0, 93);
             groupBox1.Name = "groupBox1";
@@ -158,7 +158,7 @@
 
         #endregion
 
-        private Button btnAdicionarMesa;
+        private Button BtnAdicionarMesa;
         private Panel panel1;
         private Label label1;
         private TextBox textPesquisaMesa;
