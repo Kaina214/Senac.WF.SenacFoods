@@ -3,11 +3,10 @@ namespace SenacFoods
 {
     public partial class FrmMesa : Form
     {
-        public object SelecionarMesa { get; private set; }
+        public object? SelecionarMesa { get; private set; }
 
         public FrmMesa()
         {
-            Mesa? SelecionarMesa;
             InitializeComponent();
         }
 
@@ -68,7 +67,7 @@ namespace SenacFoods
             {
                 // captar os dados da tela
 
-                int.TryParse(txtNumeroMesa.Text, out int numeromesa);
+                int.TryParse(textPesquisaMesa.Text, out int numeromesa);
 
                 // criar um novo cardapio   
                 var mesa = new Mesa
@@ -110,7 +109,7 @@ namespace SenacFoods
                 // var confirmacao = MessageBox.Show("Deseja realmente excluir o usuário selecionado?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 using (var bd = new ComandaDBContext())
                 {
-                    bd.Mesas.Remove(SelecionarMesa); //remover o usuário selecionado
+                    bd.Mesas.Remove((Mesa)SelecionarMesa); //remover o usuário selecionado
                     bd.SaveChanges(); //salvar as alterações no banco de dados
                 }
                 MessageBox.Show("Usuário excluído com sucesso!",
@@ -134,9 +133,18 @@ namespace SenacFoods
         {
             if (e.RowIndex >= 0)
             {
-                SelecionarMesa = dataGridView1.Rows[e.RowIndex].DataBoundItem as Mesa;//pegar a mesa selecionada
-                btnEditar.Enabled = true; //habilitar o botão de editar mesa
+                var selectedMesa = dataGridView1.Rows[e.RowIndex].DataBoundItem as Mesa; // pegar a mesa selecionada
+                if (selectedMesa != null)
+                {
+                    SelecionarMesa = selectedMesa;
+                    btnEditar.Enabled = true; // habilitar o botão de editar mesa
+                }
+                else
+                {
+                    SelecionarMesa = null; // garantir que SelecionarMesa seja nulo se não houver seleção válida
+                    btnEditar.Enabled = false; // desabilitar o botão de editar mesa
+                }
             }
         }
     }
-    
+}

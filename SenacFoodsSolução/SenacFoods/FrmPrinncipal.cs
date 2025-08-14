@@ -60,7 +60,8 @@ namespace SenacFoods
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+            var frmcardapio = new FormCardápio();
+            DialogResult dialogResult = frmcardapio.ShowDialog();
         }
     }
 }
